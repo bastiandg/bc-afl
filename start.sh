@@ -2,7 +2,6 @@
 
 user="builder"
 project="bc"
-#git_repo="https://github.com/ellson/graphviz.git"
 source_link="http://alpha.gnu.org/gnu/bc/bc-1.06.95.tar.bz2"
 source_archive="/tmp/${project}.tar.bz2"
 testbinary="$1"
@@ -28,10 +27,8 @@ rm "$source_archive"
 mv "/tmp/$project"*/* "$project_dir"
 cd "$project_dir"
 
-#./autogen.sh
 ./configure
 make
-#make install
 
 cd ~
 
